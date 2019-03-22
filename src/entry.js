@@ -1,12 +1,16 @@
-var moment = require('moment');
+const moment = require('moment');
 import styles from './app.css'
 
 function sayHelloToday() {
-    var element = document.createElement('div');
-    element.classList.add("hello");
-    var today = moment().format('dddd, MMMM Do YYYY');
+    let element = document.createElement('div');
+    element.classList.add("hello", "hello--arial");
+    let today = moment().format('dddd, MMMM Do YYYY');
     element.innerHTML = "Hello, today we are : " + today;
     return element;
+}
+
+function time(){
+    let now = moment().hours();
 }
 
 document.body.appendChild(sayHelloToday());
